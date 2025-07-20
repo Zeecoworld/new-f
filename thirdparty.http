@@ -1,0 +1,43 @@
+# Thanks for taking interest in Digital Training Academy, to proceed use this verification code 1234
+
+
+# 894826 is your Termii Go! login code. Code is active for 10 minutes only, one time use.
+
+
+###
+POST https://v3.api.termii.com/api/sms/send
+Content-Type: application/json
+Accept: application/json; charset=utf-8
+
+{
+     "to": "23478108013285",
+     "from": "melon",
+     "sms": "Thanks for taking interest in Digital Training Academy, to proceed use this verification code 1234",
+     "type": "plain",
+     "channel": "generic",
+     "api_key": "TLNlTTxrGXtIsTjLHiwEYLdtHmHRopOHWaOtHiSMTmiudPsPIVKoAVkbloReky"  
+}
+
+###
+POST https://v3.api.termii.com/api/sms/send
+Content-Type: application/json
+Accept: application/json; charset=utf-8
+
+{
+    "message_id": "9122821270554876574",
+    "message": "Successfully Sent",
+    "balance": 9,
+    "user": "Peter Mcleish"
+}
+
+
+###
+POST https://v3.api.termii.com/api/sms/number/send
+Content-Type: application/json
+Accept: application/json; charset=utf-8
+
+{
+    "to": "23478108013285",
+    "sms": "Thanks for taking interest in Digital Training Academy, to proceed use this verification code 1234",
+    "api_key": "TLNlTTxrGXtIsTjLHiwEYLdtHmHRopOHWaOtHiSMTmiudPsPIVKoAVkbloReky"
+}

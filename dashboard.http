@@ -1,0 +1,30 @@
+ # REST Client vscode extension 
+
+#local
+@baseUrl = http://localhost:8000/api/dashboard
+# @token =  Token 9f61b47724046e2b46cc5670a5062869815d8b9a
+@token =  Token ca723cacc8fa82b4b52142ebd2467c3d0fb1d085
+
+###
+# @name login
+POST {{baseUrl}}/login
+Content-Type: application/json
+Accept: application/json; charset=utf-8
+
+{
+    "email":"daramola@mail.com",
+    "password": "pa55w0rd"
+}
+
+###
+# @name logout
+POST {{baseUrl}}/logout
+Content-Type: application/json
+Accept: application/json; charset=utf-8
+Authorization: {{token}}
+
+###
+# @name listLearner
+GET {{baseUrl}}/list_learner
+Accept: application/json; charset=utf-8
+Authorization: {{token}}

@@ -1,0 +1,63 @@
+ # REST Client vscode extension 
+
+#local
+@baseUrl = http://localhost:8000/api
+# @token =  Token 9f61b47724046e2b46cc5670a5062869815d8b9a
+@token =  Token ca723cacc8fa82b4b52142ebd2467c3d0fb1d085
+
+
+###
+# @name verifyNin
+POST {{baseUrl}}/verify_nin
+Content-Type: application/json
+Accept: application/json; charset=utf-8
+
+{
+    "nin":"11774307807"
+}
+
+
+###
+# @name finalizeNinVerification
+POST {{baseUrl}}/finalize_nin_verification
+Content-Type: application/json
+Accept: application/json; charset=utf-8
+
+{
+    "verification_id":"76bc1b05-2cf2-4c24-a407-5e5413cf57f0",
+    "token":"09472"
+}
+
+###
+# @name ninVerificationTokenResend
+POST {{baseUrl}}/nin_verification_token_resend
+Content-Type: application/json
+Accept: application/json; charset=utf-8
+
+{
+    "verification_id":"76bc1b05-2cf2-4c24-a407-5e5413cf57f0"
+}
+
+
+###
+curl -X POST \
+  http://localhost:8000/api/create_learner_profile?verification_id=76bc1b05-2cf2-4c24-a407-5e5413cf57f0 \
+  -H 'Content-Type: multipart/form-data' \
+  -F 'first_name=Odun' \
+  -F 'last_name=Joseph' \
+  -F 'email=odun@gmail.com' \
+  -F 'phone_number=+2348123456789' \
+  -F 'account_type=STUDENT' \
+  -F 'learning_track=Web Development' \
+  -F 'skill_cluster=Frontend' \
+  -F 'work_type=ONSITE' \
+  -F 'industrial_prefrence=Tech' \
+  -F 'portfolio_link=https://john.doe.com/portfolio' \
+  -F 'state=LAGOS' \
+  -F 'gender=MALE' \
+  -F 'resume=@receipt.pdf'
+
+
+
+# https://api.object-storage.prunedge.com/coursera-dev-storage/resume/receipt.pdf
+
