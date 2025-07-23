@@ -1,10 +1,12 @@
 from django.conf import settings
 from rest_framework import views
 # from fme.permissions import RestrictedLoginPermission
-from rest_framework.permissions import IsAuthenticated #, IsAdminUser
+from rest_framework.permissions import IsAuthenticated #, IsAdminUser,
+from rest_framework.permissions import AllowAny
 from fme.helpers.request_utils import make_request_for_resp_status, make_request_for_usable_resp
 
 class BaseView(views.APIView):
+    permission_class= (AllowAny)
 
     def make_nin_request(self, url, nin):
         err_msg = None

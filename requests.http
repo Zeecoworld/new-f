@@ -2,8 +2,8 @@
 
 #local
 @baseUrl = http://localhost:8000/api
-# @token =  Token 9f61b47724046e2b46cc5670a5062869815d8b9a
-@token =  Token ca723cacc8fa82b4b52142ebd2467c3d0fb1d085
+@token =  Token 9f61b47724046e2b46cc5670a5062869815d8b9a
+# @token =  Token ca723cacc8fa82b4b52142ebd2467c3d0fb1d085
 
 
 ###
@@ -13,7 +13,7 @@ Content-Type: application/json
 Accept: application/json; charset=utf-8
 
 {
-    "nin":"11774307807"
+    "nin":"46220053131"
 }
 
 

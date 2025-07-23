@@ -26,6 +26,7 @@ class VerifyNinView(BaseView):
         responses=swagger_data.doc_response('nin_verification_first_step', 'Nin')
     )
     def post(self, request):
+        print('hello world')
         err_msg = None
         resp = {'status': 400, 'message':'Nin verification failed'}
         serializer = NinVerificationSerializer(data=request.data)
